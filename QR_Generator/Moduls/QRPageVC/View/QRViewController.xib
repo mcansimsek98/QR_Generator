@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRViewController" customModule="QR_Generator" customModuleProvider="target">
+            <connections>
+                <outlet property="closeBtn" destination="jQ4-u5-mVw" id="PBc-lx-Mo6"/>
+                <outlet property="errorLbl" destination="VfI-7t-d7W" id="TQa-Va-NF8"/>
+                <outlet property="errorView" destination="GbI-20-zgx" id="hRY-ut-dXa"/>
+                <outlet property="qrImageView" destination="UTv-n5-YC8" id="D5I-IP-tzJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="QRViewController" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-n5-YC8">
+                    <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="UTv-n5-YC8" secondAttribute="height" multiplier="1:1" id="C9k-VO-aaM"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Göster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv8-16-efF">
+                    <rect key="frame" x="152.66666666666666" y="138" width="88" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ4-u5-mVw">
+                    <rect key="frame" x="322" y="59" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="hCJ-k3-ONm"/>
+                        <constraint firstAttribute="width" secondItem="jQ4-u5-mVw" secondAttribute="height" multiplier="1:1" id="rWJ-qK-Tb7"/>
+                    </constraints>
+                    <color key="tintColor" red="0.31186631320000002" green="0.31186631320000002" blue="0.31186634299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large" weight="heavy"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR kodunuzu cihaza okut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbl-Lh-SvL">
+                    <rect key="frame" x="114.33333333333333" y="174" width="164.33333333333337" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbI-20-zgx">
+                    <rect key="frame" x="12" y="374" width="369" height="104"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;QR kodunuz oluşurken bir hata ile karşılaşıldı tekrar deneyiniz.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfI-7t-d7W">
+                            <rect key="frame" x="4" y="0.0" width="361" height="104"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="0.41866721854304634" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="VfI-7t-d7W" secondAttribute="trailing" constant="4" id="AdY-i8-x8e"/>
+                        <constraint firstAttribute="bottom" secondItem="VfI-7t-d7W" secondAttribute="bottom" id="UtI-TX-mJw"/>
+                        <constraint firstItem="VfI-7t-d7W" firstAttribute="top" secondItem="GbI-20-zgx" secondAttribute="top" id="b8s-kk-Ku0"/>
+                        <constraint firstItem="VfI-7t-d7W" firstAttribute="leading" secondItem="GbI-20-zgx" secondAttribute="leading" constant="4" id="pvv-pi-JE9"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Cv8-16-efF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="79" id="3JM-jD-rsy"/>
+                <constraint firstItem="jQ4-u5-mVw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4o5-oN-Q6g"/>
+                <constraint firstItem="UTv-n5-YC8" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.352113" id="7Ad-h7-PLg"/>
+                <constraint firstItem="GbI-20-zgx" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.122066" id="9Ks-iy-r0w"/>
+                <constraint firstItem="GbI-20-zgx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CFo-9q-XSt"/>
+                <constraint firstItem="Cv8-16-efF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gom-hQ-1Nh"/>
+                <constraint firstItem="UTv-n5-YC8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="M77-AQ-Ogs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jQ4-u5-mVw" secondAttribute="trailing" constant="16" id="Voc-XU-W9m"/>
+                <constraint firstItem="cbl-Lh-SvL" firstAttribute="top" secondItem="Cv8-16-efF" secondAttribute="bottom" constant="15" id="ZxG-nl-wf8"/>
+                <constraint firstItem="UTv-n5-YC8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dj1-Jf-CQl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GbI-20-zgx" secondAttribute="trailing" constant="12" id="dvQ-7x-Ugw"/>
+                <constraint firstItem="cbl-Lh-SvL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gch-sv-scH"/>
+                <constraint firstItem="GbI-20-zgx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="xLL-sJ-LHZ"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
